@@ -1,0 +1,20 @@
+#### Conceitos
+
+
+- KISS ( Keep It Simple Stupid )
+- Tudo é arquivo e deve ser visível
+- Pipe | 
+
+## Arquivo
+
+bit - 2 estados
+8bits = 1 Byte
+
+arquivo: sequência de bytes
+
+b1 b2 b3 b4 b5 b6 00 00 00 B1 B2 B3 00 00 00
+
+
+
+
+

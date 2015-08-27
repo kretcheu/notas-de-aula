@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<pre>
+### compilar kernel Linux
+
+aptitude install build-essential 
+aptitude install libncurses-dev
+aptitude install linux-source-3.2
+
+## aptitude install linux-source-3.2 build-essential libncurses-dev
+
+cd /usr/src/
+tar -xvf linux-source-3.2.tar.bz2
+
+ln -s linux-source-3.2 linux
+
+cd linux
+make menuconfig
+make bzImage
+make modules
+make modules_install
+make install
+
+## forma alternativa de gerar o .config
+
+make localmodconfig
+
+## Moda Debian
+
+aptitude install kernel-package 
+make-kpkg clean
+make-kpkg --revision x.x kernel_image
+
+## para instalar
+dpkg -i linux-image-0.1.deb
+
+update-initramfs -c -k 3.2.54
+update-grub
+
+
+###################################################
+
+
+</pre>
+</body>
+</html>
+ 

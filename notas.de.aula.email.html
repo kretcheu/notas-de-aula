@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<pre>
+##################
+telnet servidor-smtp 25
+
+helo mike
+mail from: "Bill Gates" <gates@microsoft.com>
+rcpt to: <kretcheu@gmail.com>
+data
+From: "Bill Gates" <gates@microsoft.com>
+To: "kretcheu" <kretcheu@gmail.com>
+Subject: manda bala 
+
+teste de email....
+.
+
+
+################
+telnet servidor-pop 110
+
+receber pop
+telnet servidor.pop 110
+user usuario
+pass senha
+list
+retr x
+dele x
+
+###############
+
+STAT
+UIDL
+###############
+
+
+</pre>
+</body>
+</html>
+ 

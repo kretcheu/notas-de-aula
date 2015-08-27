@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<pre>
+### comandos para lidar com redes
+
+# para ver / configurar interfaces de rede
+
+ifconfig
+ifconfig -a
+ifconfig eth0 192.168.10.1
+ifcondig eth0 192.168.10.1/25
+ifconfig eth0 up
+ifconfig eth0 down
+
+ethtool
+mii-tool
+
+dhclient
+dhcpcd-bin -T eth0
+
+route -n
+route add default gateway gw 192.168.0.1
+route del default
+
+route add -net 10.0.0.0/24 gw 192.168.1.2
+route add -net 10.0.0.0 netmask 255.255.255.0 gw 192.168.1.2
+
+route del -net 10.0.0.0/24
+route del -nrt 10.0.0.0 netmask 255.255.255.0
+
+
+ping
+ping6
+
+traceroute
+traceroute6
+
+arp -an
+
+/etc/network/interfaces
+Network-Manager
+
+
+netstat -n
+netstat -ntplu
+
+iwlist wlan0 scan
+iwconfig wlan0 essid rede-wifi
+iwconfig wlan0 key
+
+wpa-supplicant
+
+nmap
+
+wireshark
+
+aircrack-ng
+
+</pre>
+</body>
+</html>
+ 

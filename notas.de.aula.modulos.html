@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<pre>
+### comandos para gestão de módulos do kernel
+
+# para ver os módulos carregados
+
+lsmod
+cat /proc/modules
+
+# para carregar módulos
+
+- modprobe nome-do-modulo
+	. carrega os módulos dependentes
+
+- insmod nome-do-arquivo-do-modulo
+	. os módulos dependentes já devem estar carregados
+
+# para descarregar um módulo
+
+- modprobe -r nome-do-modulo
+	. descarrega dependências não usadas
+
+- rmmod nome-do-modulo
+	. não pode ser dependência de outro módulo em uso
+
+# para obter infos dos módulos
+
+modinfo nome-do-modulo
+modinfo nome-do-arquivo-do-modulo
+
+# onde estão os arquivos dos módulos
+
+/lib/modules/versao-do-kernel/
+exemplo: /lib/modules/3.16-3-amd64/
+
+# carga automática de módulos
+
+- ao detectar um dispositivo novo
+	. udev
+	. /lib/udev/rules.d/ /etc/udev/rules.d/ ( arquivos .rules )
+
+- durante a carga do sistema
+
+	. /etc/modules.conf
+	. /etc/modules-load.d/*
+	
+# para não carregar módulos automaticamente
+
+- blacklist
+	. etc/modprobe.d/*blacklist.conf
+
+
+
+
+
+
+</pre>
+</body>
+</html>
+ 

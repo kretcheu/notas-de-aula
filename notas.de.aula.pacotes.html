@@ -1,0 +1,88 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<pre>
+### comandos básicos (gestão de pacotes)
+
+# para virar macho
+
+sudo -s (padrão no Ubuntu)
+su (padrão no Debian)
+
+# para atualizar a lista de pacotes
+
+apt-get update
+aptitude update
+
+# para atualizar o sistema
+
+- atualização comum
+
+apt-get upgrade -d
+aptitude safe-upgrade -d
+
+- atualização de versão
+
+apt-get dist-upgrade
+aptitude full-upgrade
+
+-d -> apenas baixar os pacotes sem atualizar
+
+# para ver todos os pacotes que estão instalados
+
+dpkg -l
+
+# para ver todos os arquivos instalados por um pacote
+
+dpkg -L nome-do-pacote
+
+# para ver as informações de um pacote
+
+apt-cache show nome-do-pacote
+aptitude show nome-do-pacote
+
+# para instalar um pacote
+
+apt-get install nome-do-pacote
+aptitude install nome-do-pacote
+
+# para reinstalar um pacote
+
+apt-get install nome-do-pacote --reinstall
+aptitude reinstall nome-do-pacote
+
+# para pesquisar um pacote 
+
+apt-cache search termo-pesquisa
+aptitude search termo-pesquisa
+
+# para remover um pacote
+
+apt-get remove nome-do-pacote  
+aptitude remove nome-do-pacote
+
+# para remover um pacote e todas as suas configurações
+
+apt-get remove nome-do-pacote --purge
+aptitude purge nome-do-pacote
+
+# para remover os arquivos deb dos pacotes
+( /var/cache/apt/archives/ )
+apt-get clean
+aptitude clean
+
+# para verificar a integridade dos arquivos de um pacote
+( é preciso ter instalado o pacote debsums )
+
+debsums -a nome-do-pacote
+debsums -a 2>erros 1>log
+ 
+###################################################
+
+
+</pre>
+</body>
+</html>
+ 

@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<pre>
+### Preparação para instalação
+# Listar as partições de todos os dispositivos
+
+fdisk -l
+
+# Criar partições
+
+fdisk /dev/sdb
+
+d - delete ( apaga partições)
+n - new ( cria novas partições )
+   p - primaria
+
+q - quit ( sair sem gravar ) 
+w - write ( sair gravando )
+t - type ( tipo da partição)
+   l - list ( listar tipos de partição)
+
+# criar sistema de arquivos ("formatar")
+
+mkfs.vfat /dev/sdb1
+# Baixar a imagem ISO
+
+http://cdimage.debian.org/debian-cd/7.7.0/amd64/iso-cd/debian-7.7.0-amd64-CD-1.iso
+
+- verificar md5 sha shasum, etc
+
+ex. md5sum debian-7.7.0-amd64-CD-1.iso
+107499b831867779b50cdb0a2603e641  debian-7.7.0-amd64-CD-1.iso
+
+# Preparar para o pendrive bootar
+
+- instalar e rodar o programa unetbootin
+   . selecionar o arquivo ISO imagem do CD/DVD
+
+# Bootar o pendrive para instalar
+
+
+
+
+###################################################
+
+
+</pre>
+</body>
+</html>
+ 
